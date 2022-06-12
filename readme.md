@@ -4,7 +4,7 @@
 python3 -m venv .venv
 source .venv/bin/activate
 pip3 install -r requirements.txt
-export DB_URL="mongodb+srv://w10923201:<password>@w10923201cluster.bahwr.mongodb.net/?retryWrites=true&w=majority"
+export DB_URL="mongodb+srv://traffic-app:<password>@w10923201cluster.bahwr.mongodb.net/?retryWrites=true&w=majority"
 ```
 ###  debug mode
 ```sh

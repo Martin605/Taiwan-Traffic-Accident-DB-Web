@@ -9,9 +9,12 @@ class DB:
             cls._db = super().__new__(cls) 
         return cls._db 
 
-    def __init__(self, host="mongodb://localhost:27017/"):
-        if self.client is None:
+    def __init__(self, host=None):
+        self.set_host(host)
+    
+    def set_host(self, host=None):
+        if host is not None:
             self.client = pymongo.MongoClient(host)
 
-    def test(self):
-        return self.client.students
+    def traffic_accident(self):
+        return self.client.traffic_accident
