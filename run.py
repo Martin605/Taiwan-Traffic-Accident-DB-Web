@@ -33,5 +33,6 @@ def trafficAccidentData(year, accident_type='A1'):
 @app.route("/TrafficAccidentDataUpdate")
 def trafficAccidentDataUpdate():
     update_data()
-    return 200
+    return "200"
+    
 app.run()

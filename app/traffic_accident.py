@@ -73,11 +73,10 @@ class TrafficAccident():
     # store data to database
     def store_data_to_database(self):
         if self.db is not None:
-            if self.db.count_documents({}) > 1:
-                self.db.update_many(
-                    {'_id':''},
-                    {'$set':self.accident_df.to_dict('records')},
-                    upsert=True
+            dbcount = self.db.count_documents({})
+            if dbcount > 1:
+                self.db.insert_many(
+                    self.accident_df.iloc[dbcount-1:].to_dict('records')
                 )
             else:
                 self.db.insert_many(
