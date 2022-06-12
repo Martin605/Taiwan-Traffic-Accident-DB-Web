@@ -12,9 +12,11 @@ class DB:
     def __init__(self, host=None):
         self.set_host(host)
     
+    # set host url
     def set_host(self, host=None):
         if host is not None:
             self.client = pymongo.MongoClient(host)
 
+    # return database
     def traffic_accident(self):
         return self.client.traffic_accident
