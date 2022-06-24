@@ -1,4 +1,13 @@
 # IM4017 Database Administration 2 - Final Exam Project
+## Introduction
+This project stores the traffic accident in current year using MongoDB. User can use the web interface to query the location of traffic accident by using the web interface. Also, user can update the data by web interface.
+## Technology
+- Python 
+  - Flask 
+  - pandas 
+  - pymongo 
+- MongoDB 
+- Leaflet & OpenStreetMap 
 ## Server Install
 ```sh
 python3 -m venv .venv
